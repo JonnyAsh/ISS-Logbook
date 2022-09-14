@@ -147,6 +147,7 @@ As an extra step to secure the application we have added a captcha to
 2. block robot software from submitting fake or nefarious online requests.
 3. Protect the integrity of the app by stopping hackers from using robots to send in repeated false responses
 4. Prevent fake registrations or sign-ups for websites
+5. https://blog.growmarkentum.com/pros-and-cons-using-captcha
 
 
 ## 5.5 Password Hash and salt
