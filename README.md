@@ -142,6 +142,12 @@ def login():
 ## 5.3 Multifactor Authentication
 
 ## 5.4 Captcha
+As an extra step to secure the application we have added a captcha to 
+1. deter hackers from abusing the app
+2. block robot software from submitting fake or nefarious online requests.
+3. Protect the integrity of the app by stopping hackers from using robots to send in repeated false responses
+4. Prevent fake registrations or sign-ups for websites
+
 
 ## 5.5 Password Hash and salt
 The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
