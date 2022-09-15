@@ -157,7 +157,8 @@ if user: if check_password_hash(user.password, password): session['attempt'] = 1
 
 def is_human(captcha_response): secret = '6Lc0SNshAAAAACsZ5gzxwgIS7lLzggP6muRBBP0D' payload = {'response':captcha_response, 'secret':secret} response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload) response_text = json.loads(response.text) return response_text['success']
 
-https://user-images.githubusercontent.com/94033113/190220850-aff589bd-78b5-49fc-9e16-14d632743ad4.png
+![image](https://user-images.githubusercontent.com/94033113/190440541-b520358e-169e-4283-b2e1-501b04da67a3.png)
+
 
 An example showing how it works.
 
