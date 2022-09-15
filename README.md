@@ -70,6 +70,15 @@ For a full list of library dependencies:
 -----------------------------------------------------------
 
 # 4 Database
+
+The Sqlite3 database has two tables: users and notes. The primary key links the user_id with thier notes.
+
+<table><tr><th>id</th><th>email</th><th>password</th><th>first_name</th><tr><tr><td>1</td><td>JoeBloggs@iss.org</td><td>sha256$56T3tNrkfABGKRf3$2ef31d06254730caee75caca91c0f4b4d46e7aed8d4d7cf083eeb43e8b1c1a23</td><td>Joe</td></tr><tr><td>2</td><td>Selina@iss.org</td><td>sha256$tKmePV25mmmfbIeO$5ef065939fd37c07ae59da71876d64c0dbb994531bc41b3333ac0e48f51fdd99</td><td>Selina</td></tr></table>
+
+
+<table><tr><th>id</th><th>data</th><th>date</th><th>user_id</th><tr><tr><td>1</td><td>This is my first log. So far everything is going well. It has been 12 hours since we arrived in earth&#039;s orbit. Physically I feel fine though I am experiencing pounding headaches every few hours.</td><td>2022-09-13 11:56:05</td><td>1</td></tr><tr><td>2</td><td>This is my second day on the ISS. My headache seems to have gone, and I managed to get a good 7 hours sleep. Today, we are working on synchronising telemetrics as solar winds are giving fluctuation radiation readings on the main array.</td><td>2022-09-15 19:11:03</td><td>1</td></tr><tr><td>3</td><td>First field notes... I hav not had the same headaches as others- not sure why. I feel good though I am a little drowsy.</td><td>2022-09-15 19:14:11</td><td>2</td></tr></table>
+
+
 ------------------------------------------------------------
 
 ## 4.1 Registration
