@@ -47,12 +47,7 @@ Click to view in browser:<br>
 
 ------------------------------------------------------------
 
-
-# 2 Logbook Username, Password, Notes database
-
--------------------------------------------------------------
-
-# 3 Dependencies
+# 2 Dependencies
 
 The main modules:
 
@@ -69,9 +64,9 @@ For a full list of library dependencies:
 
 -----------------------------------------------------------
 
-# 4 Database
+# 3 Database
 
-## 4.1 stored information
+## 3.1 stored information
 The Sqlite3 database has two tables: users and notes. The primary key links the user_id with their notes.
 
 ### User credentials
@@ -82,20 +77,20 @@ The Sqlite3 database has two tables: users and notes. The primary key links the 
 
 ------------------------------------------------------------
 
-## 4.2 Registration
-Registration requires email (username), first name, and password. See user credentials (4.1). The password is hashed and salted)
+## 3.2 Registration
+Registration requires email (username), first name, and password. See user credentials (3.1). The password is hashed and salted)
 
 
-## 4.3 Login
-Login require email 9username) and password. See user credentials (4.1).
+## 3.3 Login
+Login require email 9username) and password. See user credentials (3.1).
 
-## 4.4 Notes
-Once authenticated, users are authorised to add and delete their notes. See notes (4.1)
+## 3.4 Notes
+Once authenticated, users are authorised to add and delete their notes. See notes (3.1)
 
 ---------------------------------------------------------------
-# 5 Security Functions
+# 4 Security Functions
 
-## 5.1 Password Validation for signup
+## 4.1 Password Validation for signup
 
 Password validation should have many paramaters which included complexity, length, history, expiration date, and hashing to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to the these parameters or the account cannot be created The password must contain at least one whitespace. Futhermore, The password length must be between 8 and 64 characters, and passwords with white spaces tend to be more secure (InfosecMatter, 2021). Below are examples taken from the Logbook app. 
 
@@ -179,9 +174,9 @@ def login():
 ```
 
 
-## 5.3 Multifactor Authentication
+## 4.3 Multifactor Authentication
 
-## 5.4 Captcha
+## 4.4 Captcha
 
 Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
 
@@ -218,7 +213,7 @@ An example showing the user trying to log in without enabling the captcha.
 ![image](https://user-images.githubusercontent.com/94033113/190441129-22ceb40b-dea0-42c2-923b-65eaae510f24.png)
 
 
-## 5.5 Password Hash and salt
+## 4.5 Password Hash and salt
 The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
 
 An example of a hashed and salted password of a new user:
@@ -226,11 +221,11 @@ An example of a hashed and salted password of a new user:
 ![hashed password](https://github.com/JonnyAsh/ISS-Logbook/blob/e1522dd1fdad4fb911248224da8844a0f244d38e/ISS%20Secure%20Logbook/website/images/user%20example.png)<br> <br/>
 -------------------------------------------------------------
 
-# 6 Linters
+# 5 Linters
 Linting referes to tools that can be dowloaded to analyse source code for bugs, stylistics erros, and programming errors. Below are four types: pylint and 
 flake8 examine stylistic errors, mccabe searches for complexity, and Bandit analyses for security vulnerabilities.
 
-## 6.1 Flake8
+## 5.1 Flake8
 Flake8 is wrapper that checks source code for PEP8 stardard violations; thus, preventing bad formatting and styling (GitHub, 2022).
 
 Install Flake8:
@@ -239,7 +234,7 @@ Install Flake8:
 Run Flake8:
 `flake8 auth.py`
 
-## 6.2 Pylint
+## 5.2 Pylint
 Smiliar to Flake8, this Python module looks for code smells, lists errors, and recommendation corrections (Rjmolyneaux, 2022).
 
 Install mccabe:
@@ -248,7 +243,7 @@ Install mccabe:
 Run mccabe:
 `python -m pylint auth.py`
 
-## 6.3 McCabe (Cyclomatic Complexity)
+## 5.3 McCabe (Cyclomatic Complexity)
 This tool measures the number of decisions such as 'if' conditionals in the source code; for example, the lower count, the less complex it is.
 Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
 
@@ -258,7 +253,7 @@ Install Mccabe:
 Run Mccabe:
 `python -m mccabe auth.py`
 
-## 6.4 Bandit
+## 5.4 Bandit
 
 Bandit is security analysis tool for scanning source code in Python. It will produce a report based any vulnerabilities such as plain text passwords in the code. Ngetich (2021). 
 
@@ -270,14 +265,14 @@ Run Bandit:
 
 -------------------------------------------------------------
 
-# 7 Testing
+# 6 Testing
 
 ------------------------------------------------------------
-# 8 Limitations
+# 7 Limitations
  
  ----------------------------------------------------------------
 
-# 9 References
+# 8 References
 
 Ashmore, J. Adelakun, A. Tolofari, S. (2022) 'Development Team Project: Design Document'. Paper submitted to the university of the University of Essex Online for Secure Software Development Module.
 
