@@ -22,12 +22,6 @@ In the design document, a few threats were identified applicable to the developm
 •	Software and data integrity failures
 
 
-As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
-1. deter hackers from abusing the app
-2. block robot software from submitting fake or nefarious online requests.
-3. Protect the integrity of the app by stopping hackers from using robots to send in repeated false responses
-4. Prevent fake registrations or sign-ups for websites
-5. https://blog.growmarkentum.com/pros-and-cons-using-captcha
 
 ## 1.4 Implementation
 
@@ -182,6 +176,13 @@ def login():
 ## 4.3 Multifactor Authentication
 
 ## 4.4 Captcha
+As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
+1. deter hackers from abusing the app
+2. block robot software from submitting fake or nefarious online requests.
+3. Protect the integrity of the app by stopping hackers from using robots to send in repeated false responses
+4. Prevent fake registrations or sign-ups for websites
+5. https://blog.growmarkentum.com/pros-and-cons-using-captcha
+
 
 Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
 
