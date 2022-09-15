@@ -30,17 +30,14 @@ Open your terminal:
 pip install -r requirements.txt
 ```
 
-## Running the application
-
+Run in terminal:
 ```bash
 python main.py
 ```
 
-## Viewing the application
+Click to view in browser:<br>
+`http://127.0.0.1:5000`
 
-Click on `http://127.0.0.1:5000`
-
-The webpage should open in browser.
 
 ------------------------------------------------------------
 
