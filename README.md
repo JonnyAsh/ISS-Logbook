@@ -162,11 +162,13 @@ def is_human(captcha_response): secret = '6Lc0SNshAAAAACsZ5gzxwgIS7lLzggP6muRBBP
 
 An example showing how it works.
 
-https://user-images.githubusercontent.com/94033113/190221025-98e9b32c-7c77-40c1-a900-0e0b172b0953.png
+![image](https://user-images.githubusercontent.com/94033113/190441293-06af4a42-8fae-42a0-9b98-711fad341f64.png)
+
 
 An example showing the user trying to log in without enabling the captcha.
 
-https://user-images.githubusercontent.com/94033113/190248691-dc4d200a-75c6-4fe3-bf36-48f49db9bd1f.png
+![image](https://user-images.githubusercontent.com/94033113/190441129-22ceb40b-dea0-42c2-923b-65eaae510f24.png)
+
 
 ## 5.5 Password Hash and salt
 The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
