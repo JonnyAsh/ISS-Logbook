@@ -14,12 +14,14 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2. Th
 
 ## 1.3 Threats
 
-In the design document, a few threats were identified applicable to the development of the logbook, and appropriate mitigative steps were adopted. These threats included. 
-•	Privilege escalation and broken authentication
-•	Spoofing 
-•	Brute force attack
-•	Improper logging
-•	Software and data integrity failures
+In the design document, a few threats were identified applicable to the development of the logbook, and appropriate mitigative steps were adopted.
+These threats included. 
+
+•Privilege escalation and broken authentication
+•Spoofing 
+•Brute force attack
+•Improper logging
+•Software and data integrity failures
 
 
 
