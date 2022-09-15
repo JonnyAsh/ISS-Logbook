@@ -171,8 +171,8 @@ def login():
 
 Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
 
- auth.py
-
+```
+auth.py
             if user: 
                 if check_password_hash(user.password, password): 
                    session['attempt'] = 1 # First attempt matched against hashed password. 
@@ -189,6 +189,7 @@ Below is the short demonstration from the Logbook app. This was made active by i
                   response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload) 
                   response_text = json.loads(response.text) 
                   return response_text['success']
+```
 
 ![image](https://user-images.githubusercontent.com/94033113/190440541-b520358e-169e-4283-b2e1-501b04da67a3.png)
 
