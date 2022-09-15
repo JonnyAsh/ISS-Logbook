@@ -149,13 +149,26 @@ As an extra step to secure the application we have added a captcha to
 4. Prevent fake registrations or sign-ups for websites
 5. https://blog.growmarkentum.com/pros-and-cons-using-captcha
 
-As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. Captcha is used to prevent bots from accessing web applications or websites (Thangavelu et al, 2014). The Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha.
+As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. Captcha is used to prevent bots from accessing web applications or websites (Thangavelu et al, 2014). The Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
 
-auth.py
+ auth.py
 
-if user: if check_password_hash(user.password, password): session['attempt'] = 1 # First attempt matched against hashed password. if password: if is_human(captcha_response): login_user(user, remember=True) return redirect(url_for('views.home')) else: flash('Bots are not allowed!', category= 'error')
+            if user: 
+                if check_password_hash(user.password, password): 
+                   session['attempt'] = 1 # First attempt matched against hashed password. 
+                   if password:
+                      if is_human(captcha_response): 
+                           login_user(user, remember=True) 
+                           return redirect(url_for('views.home')) 
+                      else: 
+                        flash('Bots are not allowed!', category= 'error')
 
-def is_human(captcha_response): secret = '6Lc0SNshAAAAACsZ5gzxwgIS7lLzggP6muRBBP0D' payload = {'response':captcha_response, 'secret':secret} response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload) response_text = json.loads(response.text) return response_text['success']
+          def is_human(captcha_response): 
+                  secret = '6Lc0SNshAAAAACsZ5gzxwgIS7lLzggP6muRBBP0D' 
+                  payload = {'response':captcha_response, 'secret':secret} 
+                  response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload) 
+                  response_text = json.loads(response.text) 
+                  return response_text['success']
 
 ![image](https://user-images.githubusercontent.com/94033113/190440541-b520358e-169e-4283-b2e1-501b04da67a3.png)
 
