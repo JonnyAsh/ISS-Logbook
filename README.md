@@ -69,7 +69,7 @@ For a full list of library dependencies:
 
 -----------------------------------------------------------
 
-# 4 Authentication Module
+# 4 Database
 ------------------------------------------------------------
 
 ## 4.1 Registration
