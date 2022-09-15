@@ -19,21 +19,20 @@ For this reason, a program was written in Python (Downey, 2012), which enforces 
 
 ## Implementation
 
-Installation:
-
-```bash
+Installation:<br>
+`bash
 git clone <repo-url>
-```
+`
 
-Open your terminal:
-```bash
+Open your terminal:<br>
+`bash
 pip install -r requirements.txt
-```
+`
 
-Run in terminal:
-```bash
+Run in terminal:<br>
+`bash
 python main.py
-```
+`
 
 Click to view in browser:<br>
 `http://127.0.0.1:5000`
