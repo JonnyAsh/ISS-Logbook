@@ -14,10 +14,13 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2. Th
 
 ## 1.3 Threats
 
-~~In the design document, a few threats were identified applicable to the logbook. These threats included taking over an existing user’s account and upgrading a lesser privileged account to one with more privileges.
-For this reason, a program was written in Python (Downey, 2012), which enforces strong password practices, applies cryptographic hashing functions to protect this privileged data, locks the user accounts after too many incorrect login attempts, and separates user data from the more privileged staff data. The password must contain special characters, numbers and upper-case letters. The code will also require users to confirm their password to help them catch any typos. Passwords which meet all the requirements will then be hashed using the SHA-256 cryptographic hashing method and stored in the csv file together with the user’s email address, registration date and the number of login attempts (set to 3 by default for new users) mitigating brute-force attacks. To log in to the logbook, the users will have to enter their email address and password. The entered password will be hashed and compared to the one in the database. If the passwords match, the user will be allowed to login.~~
+In the design document, a few threats were identified applicable to the development of the logbook, and appropriate mitigative steps were adopted. These threats included. 
+•	Privilege escalation and broken authentication
+•	Spoofing 
+•	Brute force attack
+•	Improper logging
+•	Software and data integrity failures
 
-## Samuel, can we get bullet points for the other threats?
 
 As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
 1. deter hackers from abusing the app
