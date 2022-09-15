@@ -83,7 +83,7 @@ The Sqlite3 database has two tables: users and notes. The primary key links the 
 ------------------------------------------------------------
 
 ## 4.2 Registration
-Registration requires email (username), first name, and password. See user credentials (4.1).
+Registration requires email (username), first name, and password. See user credentials (4.1). The password is hashed and salted)
 
 
 ## 4.3 Login
