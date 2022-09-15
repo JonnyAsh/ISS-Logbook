@@ -186,7 +186,7 @@ An example showing the user trying to log in without enabling the captcha.
 ## 5.5 Password Hash and salt
 The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
 
-An example of a hashed and salted password of a new user.
+An example of a hashed and salted password of a new user:
 
 ![hashed password](https://github.com/JonnyAsh/ISS-Logbook/blob/e1522dd1fdad4fb911248224da8844a0f244d38e/ISS%20Secure%20Logbook/website/images/user%20example.png)<br> <br/>
 -------------------------------------------------------------
