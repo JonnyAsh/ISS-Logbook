@@ -71,7 +71,7 @@ For a full list of library dependencies:
 
 # 4 Database
 
-The Sqlite3 database has two tables: users and notes. The primary key links the user_id with thier notes.
+The Sqlite3 database has two tables: users and notes. The primary key links the user_id with their notes.
 
 <table><tr><th>id</th><th>email</th><th>password</th><th>first_name</th><tr><tr><td>1</td><td>JoeBloggs@iss.org</td><td>sha256$56T3tNrkfABGKRf3$2ef31d06254730caee75caca91c0f4b4d46e7aed8d4d7cf083eeb43e8b1c1a23</td><td>Joe</td></tr><tr><td>2</td><td>Selina@iss.org</td><td>sha256$tKmePV25mmmfbIeO$5ef065939fd37c07ae59da71876d64c0dbb994531bc41b3333ac0e48f51fdd99</td><td>Selina</td></tr></table>
 
