@@ -142,14 +142,14 @@ def login():
 ## 5.3 Multifactor Authentication
 
 ## 5.4 Captcha
-As an extra step to secure the application we have added a captcha to 
+As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
 1. deter hackers from abusing the app
 2. block robot software from submitting fake or nefarious online requests.
 3. Protect the integrity of the app by stopping hackers from using robots to send in repeated false responses
 4. Prevent fake registrations or sign-ups for websites
 5. https://blog.growmarkentum.com/pros-and-cons-using-captcha
 
-As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. Captcha is used to prevent bots from accessing web applications or websites (Thangavelu et al, 2014). The Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
+Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
 
  auth.py
 
