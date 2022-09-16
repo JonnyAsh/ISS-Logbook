@@ -176,9 +176,8 @@ def login():
 
 ## 4.3 Multifactor Authentication
 MFA is incorporated into the application for
-
 1. Security: defence in-depth
-2.Compliance: GDPR compliance 
+2. Compliance: GDPR compliance 
 
 
 
