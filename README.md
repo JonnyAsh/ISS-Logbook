@@ -175,6 +175,12 @@ def login():
 
 
 ## 4.3 Multifactor Authentication
+MFA is incorporated into the application for 
+1. Security: defence in-depth
+2.Compliance: GDPR compliance 
+
+
+
 
 ## 4.4 Captcha
 As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
