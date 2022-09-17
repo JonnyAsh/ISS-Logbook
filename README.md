@@ -2,7 +2,7 @@
 -------------------------------------------------------------
 ## 1.1 Assignment brief
 
-This project aims to desing a secure application that helps ESA astronnauts on the International Space station to record sensitive research information inline with OWASP'S main security threats (OWASP, 2021) as outlined in our Design document (Ashmore et al, 2022).
+This project aims to desiging a secure application that helps ESA astronnauts on the International Space station to record sensitive research information inline with OWASP'S main security threats (OWASP, 2021) as outlined in our Design document (Ashmore et al, 2022).
 
 
 --------------------------------------------------------------
@@ -73,7 +73,7 @@ The Sqlite3 database has two tables: users and notes. The primary key links the 
 <table><tr><th>id</th><th>email</th><th>password</th><th>first_name</th><tr><tr><td>1</td><td>JoeBloggs@iss.org</td><td>sha256$56T3tNrkfABGKRf3$2ef31d06254730caee75caca91c0f4b4d46e7aed8d4d7cf083eeb43e8b1c1a23</td><td>Joe</td></tr><tr><td>2</td><td>Selina@iss.org</td><td>sha256$tKmePV25mmmfbIeO$5ef065939fd37c07ae59da71876d64c0dbb994531bc41b3333ac0e48f51fdd99</td><td>Selina</td></tr></table>
 
 ### Notes
-<table><tr><th>id</th><th>data</th><th>date</th><th>user_id</th><tr><tr><td>1</td><td>This is my first log. So far everything is going well. It has been 12 hours since we arrived in earth&#039;s orbit. Physically I feel fine though I am experiencing pounding headaches every few hours.</td><td>2022-09-13 11:56:05</td><td>1</td></tr><tr><td>2</td><td>This is my second day on the ISS. My headache seems to have gone, and I managed to get a good 7 hours sleep. Today, we are working on synchronising telemetrics as solar winds are giving fluctuation radiation readings on the main array.</td><td>2022-09-15 19:11:03</td><td>1</td></tr><tr><td>3</td><td>First field notes... I hav not had the same headaches as others- not sure why. I feel good though I am a little drowsy.</td><td>2022-09-15 19:14:11</td><td>2</td></tr></table>
+<table><tr><th>id</th><th>data</th><th>date</th><th>user_id</th><tr><tr><td>1</td><td>This is my first log. So far everything is going well. It has been 12 hours since we arrived in earth&#039;s orbit. Physically I feel fine though I am experiencing pounding headaches every few hours.</td><td>2022-09-13 11:56:05</td><td>1</td></tr><tr><td>2</td><td>This is my second day on the ISS. My headache seems to have gone, and I managed to get a good 7 hours sleep. Today, we are working on synchronising telemetrics as solar winds are giving fluctuation radiation readings on the main array.</td><td>2022-09-15 19:11:03</td><td>1</td></tr><tr><td>3</td><td>First field notes... I have not had the same headaches as others- not sure why. I feel good though I am a little drowsy.</td><td>2022-09-15 19:14:11</td><td>2</td></tr></table>
 
 ------------------------------------------------------------
 
@@ -175,6 +175,12 @@ def login():
 
 
 ## 4.3 Multifactor Authentication
+MFA is incorporated into the application for
+1. Security: defence in-depth
+2. Compliance: GDPR compliance 
+
+
+
 
 ## 4.4 Captcha
 As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
@@ -182,7 +188,7 @@ As a mitigation to OWASP top 10 identification and authentication failures, the 
 2. block robot software from submitting fake or nefarious online requests.
 3. Protect the integrity of the app by stopping hackers from using robots to send in repeated false responses
 4. Prevent fake registrations or sign-ups for websites
-5. https://blog.growmarkentum.com/pros-and-cons-using-captcha
+
 
 
 Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
@@ -276,6 +282,13 @@ Run Bandit:
 
 ------------------------------------------------------------
 # 7 Limitations
+1. bugs, broken code, & technical debt. 
+2. premature optimization
+3. complicated new technologies 
+4. too much (or not enough) abstraction
+5. overlooking the little things
+
+
  
  ----------------------------------------------------------------
 
@@ -309,6 +322,8 @@ Ngetich, A. (2021) How to scan Python Code for Vulnerabilities using Bandit. Hac
 ‌
 ‌
 OWASP (2021) OWASP Top 10:2021. owasp.org. Available from: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
+
+5. https://blog.growmarkentum.com/pros-and-cons-using-captcha
 
 
 
