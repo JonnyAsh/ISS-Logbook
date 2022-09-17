@@ -282,9 +282,9 @@ Run Bandit:
 
 ------------------------------------------------------------
 # 7 Limitations
-1. bugs, broken code, & technical debt. Why It Happens: Under-Scoping
+1. bugs, broken code, & technical debt. 
 2. premature optimization
-3. complicated new technologies
+3. complicated new technologies 
 4. too much (or not enough) abstraction
 5. overlooking the little things
 
