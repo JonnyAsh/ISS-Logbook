@@ -276,6 +276,8 @@ Install Bandit:
 Run Bandit: 
 `bandit -r auth.py`<br>
 
+Output
+![bandit](https://github.com/JonnyAsh/ISS-Logbook/blob/7b7553cdd6981c21fb849315b82e619ae368fd8b/ISS%20Secure%20Logbook/website/images/email%20length.png)<br> <br/>
 -------------------------------------------------------------
 
 # 6 Testing
