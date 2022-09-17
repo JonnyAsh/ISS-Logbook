@@ -1,12 +1,14 @@
+from flask import *
 from flask import Flask, session
 from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager
-from flask import *
+
 from datetime import timedelta
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
+
 
 def create_app():
     app = Flask(__name__)
@@ -19,7 +21,6 @@ def create_app():
         session.permanent = True
         app.permanent_session_lifetime = timedelta(minutes=1)
         session.modified = True
-    
     db.init_app(app)
 
     from .views import views
@@ -27,7 +28,6 @@ def create_app():
 
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
-    
 
     from .models import User, Note
 
