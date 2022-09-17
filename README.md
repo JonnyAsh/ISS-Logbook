@@ -296,12 +296,14 @@ Run Bandit:
 
 Ashmore, J. Adelakun, A. Tolofari, S. (2022) 'Development Team Project: Design Document'. Paper submitted to the university of the University of Essex Online for Secure Software Development Module.
 
-Downey, A.B. (2012) Python for software design how to think like a computer scientist. Cambridge: Cambridge University Press.   (Samuel entry)
+Downey, A.B. (2012) Python for software design how to think like a computer scientist. Cambridge: Cambridge University Press.
 
 GitHub. (2022) PyCQA/flake8. Available from: https://github.com/pycqa/flake8 [Accessed 13 Sep. 2022].
+
+Kaudelka, L. (2021) The Pros and Cons of Using CAPTCHA on Your Senior Living Website. blog.growmarkentum.com. Available from: https://blog.growmarkentum.com/pros-and-cons-using-captcha [Accessed 17 Sep. 2022].
 ‌
 
-Khan, M.W. (2021) Pool Map With Multiple Arguments in Python. Delft Stack. Available from: https://www.delftstack.com/howto/python/python-pool-map-multiple-arguments/ [Accessed 9 Sep. 2022].   (Samuel entry)
+Khan, M.W. (2021) Pool Map With Multiple Arguments in Python. Delft Stack. Available from: https://www.delftstack.com/howto/python/python-pool-map-multiple-arguments/ [Accessed 9 Sep. 2022].
 
 Rjmolyneaux (2022) Use PyLint for Python code - Visual Studio (Windows). docs.microsoft.com. Available from: https://docs.microsoft.com/en-us/visualstudio/python/linting-python-code?view=vs-2022 [Accessed 13 Sep. 2022].
 ‌
@@ -323,7 +325,7 @@ Ngetich, A. (2021) How to scan Python Code for Vulnerabilities using Bandit. Hac
 ‌
 OWASP (2021) OWASP Top 10:2021. owasp.org. Available from: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
 
-5. https://blog.growmarkentum.com/pros-and-cons-using-captcha
+
 
 
 
