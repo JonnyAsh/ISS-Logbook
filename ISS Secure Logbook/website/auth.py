@@ -1,5 +1,6 @@
 #session is a flask extension used to support the server-side application for login attempts
 from flask import Blueprint, render_template, request, flash, redirect, url_for, session, app
+import requests, json
 from .models import User
 # This security library implments secure authication visa hashing and salting.
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -27,15 +28,18 @@ def login():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
+        captcha_response = request.form.get('g-recaptcha-response')
         user = User.query.filter_by(email=email).first()
 
         if user:
             if check_password_hash(user.password, password):
-                flash('Logged in successfully!', category='success')
                 session['attempt'] = 1 # First attempt matched against hashed password.
-                login_user(user, remember=True)
-                return redirect(url_for('views.home'))
-        
+                if password:
+                   if is_human(captcha_response):
+                        login_user(user, remember=True)
+                        return redirect(url_for('views.home'))
+                   else:
+                     flash('Bots are not allowed!', category= 'error') 
             else:
                 session['attempt'] = session['attempt'] + 1
                 if session['attempt'] > max_attempts: # Third failed attempt sends user to an error page.
@@ -46,6 +50,13 @@ def login():
             flash('Email does not exist.', category='error')
    
     return render_template("login.html", user=current_user)
+
+def is_human(captcha_response):
+        secret = '6Lc0SNshAAAAACsZ5gzxwgIS7lLzggP6muRBBP0D'
+        payload = {'response':captcha_response, 'secret':secret}
+        response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload)
+        response_text = json.loads(response.text)
+        return response_text['success']
 
 
 @auth.route('/logout')

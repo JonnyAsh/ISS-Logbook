@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
 %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <form method="POST">
   <h3 align="center">Login</h3>
   <div class="form-group">
@@ -22,6 +23,8 @@
       placeholder="Enter password"
     />
   </div>
+  <br />
+  <div class="g-recaptcha" data-sitekey="6Lc0SNshAAAAANCIfhA_yZX7pTpUtXZ-gYASgDYo"></div>
   <br />
   <button type="submit" class="btn btn-primary">Login</button>
 </form>
