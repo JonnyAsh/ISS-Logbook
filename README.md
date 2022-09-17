@@ -2,7 +2,7 @@
 -------------------------------------------------------------
 ## 1.1 Assignment brief
 
-This project aims to desing a secure application that helps ESA astronnauts on the International Space station to record sensitive research information inline with OWASP'S main security threats (OWASP, 2021) as outlined in our Design document (Ashmore et al, 2022).
+This project aims to desiging a secure application that helps ESA astronnauts on the International Space station to record sensitive research information inline with OWASP'S main security threats (OWASP, 2021) as outlined in our Design document (Ashmore et al, 2022).
 
 
 --------------------------------------------------------------
