@@ -174,16 +174,8 @@ def login():
 
 ```
 
-
-
-
-
-
 ## 4.3 Captcha
 As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
-
-
-
 
 Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
 
@@ -236,10 +228,12 @@ flake8 examine stylistic errors, mccabe searches for complexity, and Bandit anal
 Flake8 is wrapper that checks source code for PEP8 stardard violations; thus, preventing bad formatting and styling (GitHub, 2022).
 
 Pre-linting:
+
 ![pre](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/Flake8%20before.png)<br><br/>
 
 
 Post-posting:
+
 ![post](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/flake8%20after.png)<br><br/>
 
 Install Flake8:
@@ -253,12 +247,13 @@ Smiliar to Flake8, this Python module looks for code smells, lists errors, and r
 
 
 Pre-linting:
+
 ![pre](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/pylint%20before.png)<br><br/>
 
 
 Post-linting:
-![post](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/pylint%20after.png)<br><br/>
 
+![post](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/pylint%20after.png)<br><br/>
 
 Install Pylint:
 `pip install pylint`<br>
@@ -271,6 +266,7 @@ This tool measures the number of decisions such as 'if' conditionals in the sour
 Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
 
 Output:
+
 ![email exists](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/mccabe%20before.png)<br><br/>
 
 Install Mccabe:
