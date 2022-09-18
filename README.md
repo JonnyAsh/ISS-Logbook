@@ -44,9 +44,7 @@ Werkzeug 2.2.2
 Sqlalchemy 1.4.41
 Sqlite3 3.39.2
 ```
-For a full list of library dependencies, see `requirements.txt`.
-
------------------------------------------------------------
+----------------------------------------------------------
 
 # 3 Database
 
