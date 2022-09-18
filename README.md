@@ -194,7 +194,7 @@ An example showing the user trying to log in without enabling the captcha:
 
 
 ## 4.4 Password Hash and salt
-The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
+The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
 
 An example of a hashed and salted password of a new user:
 
@@ -202,7 +202,7 @@ An example of a hashed and salted password of a new user:
 -------------------------------------------------------------
 
 # 5 Linters
-Linting refers to tools that can be downloaded to analyse source code. Below are four types: Pylint and 
+Below are four types: Pylint and 
 flake8 examine stylistic errors, Mccabe searches for complexity, and Bandit analyses for security vulnerabilities.
 
 ## 5.1 Flake8
