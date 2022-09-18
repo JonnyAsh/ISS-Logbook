@@ -2,22 +2,23 @@ import json
 import requests
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
-#  session is a flask extension used to support the server-side application for login attempts
-from flask import Blueprint, render_template, request, flash, redirect, url_for, session, app
+#  session is a flask extension used to support
+#  the server-side application for login attempts
+from flask import Blueprint, render_template, request
+from flask import flash, redirect, url_for, session, app
 from .models import User
 # This security library implments secure authication visa hashing and salting.
 from . import db
 #  Timedelta function to calculate attempts
-#from datetime import timedelta
+from datetime import timedelta
 
 auth = Blueprint('auth', __name__)
 
 # This is the maximum attempts for password attempts; it can be changed.
 max_attempts = 3
 
+
 @auth.route('/login', methods=['GET', 'POST'])
-
-
 def login():
     """"
     Form login.
@@ -37,13 +38,14 @@ def login():
 
         if user:
             if check_password_hash(user.password, password):
-                session['attempt'] = 1  #  First attempt matched against hashed password
+                #  First attempt matched against hashed password
+                session['attempt'] = 1
                 if password:
                     if is_human(captcha_response):
                         login_user(user, remember=True)
                         return redirect(url_for('views.home'))
                     else:
-                       flash('Bots are not allowed!', category='error')
+                        flash('Bots are not allowed!', category='error')
             else:
                 session['attempt'] = session['attempt'] + 1
                 #  Third failed attempt sends user to an error page.
@@ -57,13 +59,15 @@ def login():
             flash('Email does not exist.', category='error')
     return render_template("login.html", user=current_user)
 
+
 def is_human(captcha_response):
     """
     Form captcha.
     """
     secret = '6Lc0SNshAAAAACsZ5gzxwgIS7lLzggP6muRBBP0D'
-    payload = {'response':captcha_response, 'secret':secret}
-    response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload)
+    payload = {'response': captcha_response, 'secret': secret}
+    response = requests.post("https://www.google.com/recaptcha/api/siteverify",
+                             payload)
     response_text = json.loads(response.text)
     return response_text['success']
 
@@ -77,11 +81,13 @@ def logout():
     logout_user()
     return redirect(url_for('auth.login'))
 
+
 # Special characters for password complexity.
-SpecialSym =['$', '@', '#', '%']
+SpecialSym = ['$', '@', '#', '%']
 
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
+
 def sign_up():
     """
     form sign_up
@@ -122,4 +128,4 @@ def sign_up():
             login_user(new_user, remember=True)
             flash('Account created!', category='success')
             return redirect(url_for('views.home'))
-        return render_template("sign_up.html", user=current_user)
+    return render_template("sign_up.html", user=current_user)
