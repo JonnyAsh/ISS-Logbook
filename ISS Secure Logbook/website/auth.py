@@ -5,12 +5,13 @@ from werkzeug.security import generate_password_hash, check_password_hash
 #  session is a flask extension used to support
 #  the server-side application for login attempts
 from flask import Blueprint, render_template, request
-from flask import flash, redirect, url_for, session, app
+from flask import flash, redirect, url_for, session
+#  app
 from .models import User
 # This security library implments secure authication visa hashing and salting.
 from . import db
 #  Timedelta function to calculate attempts
-from datetime import timedelta
+#  from datetime import timedelta
 
 auth = Blueprint('auth', __name__)
 
@@ -87,7 +88,6 @@ SpecialSym = ['$', '@', '#', '%']
 
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
-
 def sign_up():
     """
     form sign_up
@@ -98,31 +98,38 @@ def sign_up():
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
-        # Below are conditions for satisfying password requirements of length and complexity.
+        #  Below are conditions for satisfying password
+        #  requirements of length and complexity.
         user = User.query.filter_by(email=email).first()
         if user:
             flash('Email already exists.', category='error')
         elif len(email) < 4:
             flash('Email must be greater than 3 characters.', category='error')
         elif len(first_name) < 3:
-            flash('First name must be greater than 1 character.', category='error')
+            flash('First name must be greater than 1 character.',
+                  category='error')
         elif password1 != password2:
             flash('Passwords don\'t match.', category='error')
         elif not any(char.isdigit() for char in password1 and password2):
-            flash('Password1 should have at least one numeral', category='error')
+            flash('Password1 should have at least one numeral',
+                  category='error')
         elif not any(char.isupper() for char in password1 and password2):
-            flash('Password should have at least one uppercase letter', category='error')
+            flash('Password should have at least one uppercase letter',
+                  category='error')
         elif not any(char.islower() for char in password1 and password2):
-            flash('Password should have at least one lowercase letter', category='error')
+            flash('Password should have at least one lowercase letter',
+                  category='error')
         elif not any(char in SpecialSym for char in password1 and password2):
-            flash('Password should have at least one of the symbols $@#', category='error')
+            flash('Password should have at least one of the symbols $@#',
+                  category='error')
         elif len(password1) < 8:
             flash('Password must be at least 8 characters.', category='error')
         else:
             #  Once password requirements have been met, the password is added
-            #  to database hashed and salted according to sha256 hashing function
-            new_user = User(email=email, first_name=first_name, password=generate_password_hash(
-                password1, method='sha256'))
+            #  to database hashed and salted according to sha256 hash function
+            new_user = User(email=email, first_name=first_name,
+                            password=generate_password_hash
+                            (password1, method='sha256'))
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
