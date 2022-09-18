@@ -74,7 +74,7 @@ Once authenticated, users are authorised to add and delete their notes. See note
 
 ## 4.1 Password Validation for signup
 
-Password validation should have many parameters which included complexity, length, history, expiration date, and hashing to ensure account security (Simplilearn.com, 2021). A user creating a password must adhere to these parameters or the account cannot be created as the password must contain at least one whitespace. Furthermore, the password length must be between 8 and 64 characters, and passwords with white spaces tend to be more secure (InfosecMatter, 2021). Below are examples taken from the Logbook app. 
+These password validations include length, upper and lower case, characters, numbers, and double password fields. Non-compliance results in failure. Furthermore, the password length must be between 8 and 64 characters, and passwords with white spaces tend to be more secure (InfosecMatter, 2021). Below are examples taken from the Logbook app.
 
 1.`if user:
             flash('Email already exists.', category='error')`
