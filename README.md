@@ -235,12 +235,12 @@ flake8 examine stylistic errors, mccabe searches for complexity, and Bandit anal
 ## 5.1 Flake8
 Flake8 is wrapper that checks source code for PEP8 stardard violations; thus, preventing bad formatting and styling (GitHub, 2022).
 
-Pre-linting
+Pre-linting:
 
 ![pre](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/Flake8%20before.png)<br><br/>
 
 
-Post-posting
+Post-posting:
 
 ![post](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/flake8%20after.png)<br><br/>
 
@@ -254,12 +254,12 @@ Run Flake8:
 Smiliar to Flake8, this Python module looks for code smells, lists errors, and recommendation corrections (Rjmolyneaux, 2022).
 
 
-Pre-linting
+Pre-linting:
 
 ![pre](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/pylint%20before.png)<br><br/>
 
 
-Post-linting
+Post-linting:
 
 ![post](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/pylint%20after.png)<br><br/>
 
