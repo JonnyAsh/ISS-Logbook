@@ -25,24 +25,12 @@ In the design document, a few threats were identified applicable to the developm
 ## 1.4 Implementation
 
 Installation:<br>
-`bash
+```
 git clone <repo-url>
-`
-
-Open your terminal:<br>
-`bash
 pip install -r requirements.txt
-`
-
-Run in terminal:<br>
-`bash
 python main.py
-`
-
-Click to view in browser:<br>
-`http://127.0.0.1:5000`
-
-
+http://127.0.0.1:5000
+```
 ------------------------------------------------------------
 
 # 2 Dependencies
