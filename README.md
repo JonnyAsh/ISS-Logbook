@@ -158,7 +158,7 @@ def login():
 ## 4.3 Captcha
 As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
 
-Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
+This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
 
 ```
 auth.py
