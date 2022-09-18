@@ -14,13 +14,14 @@ The ISS Logbook application is built as a web microservice using Flask 2.2.2. Th
 
 ## 1.3 Threats
 
-In the design document, a few threats were identified applicable to the development of the logbook, and appropriate mitigative steps were adopted.
-These threats included. 
-1. Privilege escalation and broken authentication
-2. Spoofing
-3. Injection 
-4. Improper logging
-5. Software and data integrity failures
+In the design document, a few threats were identified applicable to the development of the logbook, and appropriate mitigative steps were adopted, although we had some limitations listed in the limitation.
+These threats included; 
+1. Broken access control
+2. Cryptographic failure
+3. Insecure design
+4. Security misconfiguration
+5. Vulnerable and outdated components
+6. Identification and authentication failures
 
 
 
@@ -174,20 +175,13 @@ def login():
 ```
 
 
-## 4.3 Multifactor Authentication
-MFA is incorporated into the application for
-1. Security: defence in-depth
-2. Compliance: GDPR compliance 
 
 
 
 
-## 4.4 Captcha
+## 4.3 Captcha
 As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
-1. deter hackers from abusing the app
-2. block robot software from submitting fake or nefarious online requests.
-3. Protect the integrity of the app by stopping hackers from using robots to send in repeated false responses
-4. Prevent fake registrations or sign-ups for websites
+
 
 
 
@@ -226,7 +220,7 @@ An example showing the user trying to log in without enabling the captcha.
 ![image](https://user-images.githubusercontent.com/94033113/190441129-22ceb40b-dea0-42c2-923b-65eaae510f24.png)
 
 
-## 4.5 Password Hash and salt
+## 4.4 Password Hash and salt
 The Werkzeug dependency has a security module `werkzeug.security` that generates and checks a password hash for the database. It goes further by adding a salt string length of 8 to the hashing process. The 256-bit hashing function the program uses allows up to 64 hexadecimal characters (Khan, 2021). Salting the hashed password mitigates rainbow attacks (Techmonger, 2022).
 
 An example of a hashed and salted password of a new user:
@@ -287,11 +281,10 @@ Google secret key exposed; this will be deleted after submission.
 
 ------------------------------------------------------------
 # 7 Limitations
-1. bugs, broken code, & technical debt. 
-2. premature optimization
-3. complicated new technologies 
-4. too much (or not enough) abstraction
-5. overlooking the little things
+1. Server-side input validation was not implemented – injection was not mitigated
+2. Security logging and monitoring failures was not implemented
+3. Server side request forgery was not implemented, no access control list was created
+
 
 
  
