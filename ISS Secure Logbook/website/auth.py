@@ -1,5 +1,5 @@
-import requests
 import json
+import requests
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 #  session is a flask extension used to support the server-side application for login attempts
@@ -42,16 +42,16 @@ def login():
                         login_user(user, remember=True)
                         return redirect(url_for('views.home'))
                     else:
-                      flash('Bots are not allowed!', category= 'error') 
+                      flash('Bots are not allowed!', category= 'error')
             else:
                 session['attempt'] = session['attempt'] + 1
-                if session['attempt'] > max_attempts: # Third failed attempt sends user to an error page.
+                #  Third failed attempt sends user to an error page.
+                if session['attempt'] > max_attempts:
                     return render_template('login.html', user=current_user)
                 else:
                     flash('Incorrect password, try again. ' + str(max_attempts + 1 - session['attempt']) + ' attempts remaining.', category='error')
         else:
             flash('Email does not exist.', category='error')
-   
     return render_template("login.html", user=current_user)
 
 def is_human(captcha_response):
@@ -118,6 +118,4 @@ def sign_up():
             login_user(new_user, remember=True)
             flash('Account created!', category='success')
             return redirect(url_for('views.home'))
-            
-    return render_template("sign_up.html", user=current_user)
-
+        return render_template("sign_up.html", user=current_user)
