@@ -218,11 +218,11 @@ An example of a hashed and salted password of a new user:
 -------------------------------------------------------------
 
 # 5 Linters
-Linting referes to tools that can be dowloaded to analyse source code for bugs, stylistics erros, and programming errors. Below are four types: pylint and 
-flake8 examine stylistic errors, mccabe searches for complexity, and Bandit analyses for security vulnerabilities.
+Linting refers to tools that can be downloaded to analyse source code. Below are four types: Pylint and 
+flake8 examine stylistic errors, Mccabe searches for complexity, and Bandit analyses for security vulnerabilities.
 
 ## 5.1 Flake8
-Flake8 is wrapper that checks source code for PEP8 stardard violations; thus, preventing bad formatting and styling (GitHub, 2022).
+Flake8 is wrapper that checks source code for PEP8 standard violations; thus, preventing bad formatting and styling (GitHub, 2022).
 
 Install Flake8:
 `pip install flake8`
@@ -231,7 +231,7 @@ Run Flake8:
 `flake8 auth.py`
 
 ## 5.2 Pylint
-Smiliar to Flake8, this Python module looks for code smells, lists errors, and recommendation corrections (Rjmolyneaux, 2022).
+Similar to Flake8, this Python module looks for code smells, lists errors, and recommendation corrections (Rjmolyneaux, 2022).
 
 Install mccabe:
 `pip install pylint`<br>
