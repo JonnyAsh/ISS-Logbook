@@ -174,8 +174,16 @@ def login():
 
 ```
 
+
+
+
+
+
 ## 4.3 Captcha
 As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
+
+
+
 
 Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
 
@@ -227,15 +235,6 @@ flake8 examine stylistic errors, mccabe searches for complexity, and Bandit anal
 ## 5.1 Flake8
 Flake8 is wrapper that checks source code for PEP8 stardard violations; thus, preventing bad formatting and styling (GitHub, 2022).
 
-Pre-linting:
-
-![pre](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/Flake8%20before.png)<br><br/>
-
-
-Post-posting:
-
-![post](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/flake8%20after.png)<br><br/>
-
 Install Flake8:
 `pip install flake8`
 
@@ -245,29 +244,15 @@ Run Flake8:
 ## 5.2 Pylint
 Smiliar to Flake8, this Python module looks for code smells, lists errors, and recommendation corrections (Rjmolyneaux, 2022).
 
-
-Pre-linting:
-
-![pre](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/pylint%20before.png)<br><br/>
-
-
-Post-linting:
-
-![post](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/pylint%20after.png)<br><br/>
-
-Install Pylint:
+Install mccabe:
 `pip install pylint`<br>
 
-Run Pylint:
+Run mccabe:
 `python -m pylint auth.py`
 
 ## 5.3 McCabe (Cyclomatic Complexity)
 This tool measures the number of decisions such as 'if' conditionals in the source code; for example, the lower count, the less complex it is.
 Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
-
-Output:
-
-![email exists](https://github.com/JonnyAsh/ISS-Logbook/blob/08f4ffc9719447fdd124cb339f8f4c7a88ae21d9/ISS%20Secure%20Logbook/website/images/mccabe%20before.png)<br><br/>
 
 Install Mccabe:
 `pip install mccabe`
@@ -293,6 +278,13 @@ Google secret key exposed; this will be deleted after submission.
 -------------------------------------------------------------
 
 # 6 Testing
+See below the basic testing of different sections of the code.
+![image](https://user-images.githubusercontent.com/94033113/190926645-e4bda48a-0a85-4878-84f2-f9e560c94bef.png)
+
+
+
+![image](https://user-images.githubusercontent.com/94033113/190927650-4e47353b-7305-4cd6-bba6-db0389ca70e1.png)
+
 
 ------------------------------------------------------------
 # 7 Limitations
