@@ -7,8 +7,8 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for,
 from .models import User
 # This security library implments secure authication visa hashing and salting.
 from . import db
-#Timedelta function to calculate attempts
-from datetime import timedelta
+#  Timedelta function to calculate attempts
+#from datetime import timedelta
 
 auth = Blueprint('auth', __name__)
 
@@ -16,6 +16,7 @@ auth = Blueprint('auth', __name__)
 max_attempts = 3
 
 @auth.route('/login', methods=['GET', 'POST'])
+
 
 def login():
     """"
@@ -36,20 +37,22 @@ def login():
 
         if user:
             if check_password_hash(user.password, password):
-                session['attempt'] = 1 #  First attempt matched against hashed password
+                session['attempt'] = 1  #  First attempt matched against hashed password
                 if password:
                     if is_human(captcha_response):
                         login_user(user, remember=True)
                         return redirect(url_for('views.home'))
                     else:
-                      flash('Bots are not allowed!', category= 'error')
+                       flash('Bots are not allowed!', category='error')
             else:
                 session['attempt'] = session['attempt'] + 1
                 #  Third failed attempt sends user to an error page.
                 if session['attempt'] > max_attempts:
                     return render_template('login.html', user=current_user)
                 else:
-                    flash('Incorrect password, try again. ' + str(max_attempts + 1 - session['attempt']) + ' attempts remaining.', category='error')
+                    flash('Incorrect password, try again. ' + str(
+                          max_attempts + 1 - session['attempt'])
+                          + ' attempts remaining.', category='error')
         else:
             flash('Email does not exist.', category='error')
     return render_template("login.html", user=current_user)
@@ -77,6 +80,7 @@ def logout():
 # Special characters for password complexity.
 SpecialSym =['$', '@', '#', '%']
 
+
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
     """
@@ -101,7 +105,7 @@ def sign_up():
         elif not any(char.isdigit() for char in password1 and password2):
             flash('Password1 should have at least one numeral', category='error')
         elif not any(char.isupper() for char in password1 and password2):
-            flash ('Password should have at least one uppercase letter', category='error')
+            flash('Password should have at least one uppercase letter', category='error')
         elif not any(char.islower() for char in password1 and password2):
             flash('Password should have at least one lowercase letter', category='error')
         elif not any(char in SpecialSym for char in password1 and password2):
