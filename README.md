@@ -276,7 +276,7 @@ See below the basic testing of different sections of the code.
 # 7 Limitations
 1. Server-side input validation was not implemented – injection was not mitigated
 2. Security logging and monitoring failures was not implemented
-3. Server side request forgery was not implemented, no access control list was created
+3. Server-side request forgery was not implemented, no access control list was created
 
  ----------------------------------------------------------------
 
