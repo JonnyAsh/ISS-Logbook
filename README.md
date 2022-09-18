@@ -285,8 +285,6 @@ Qac, H. (2022) Cyclomatic Complexity Explained | Perforce. Available from: https
 Rjmolyneaux (2022) Use PyLint for Python code - Visual Studio (Windows). docs.microsoft.com. Available from: https://docs.microsoft.com/en-us/visualstudio/python/linting-python-code?view=vs-2022 [Accessed 13 Sep. 2022].
 ‌
 
-Simplilearn.com. (2021) Understanding Why is the Password Validation Process Important in JavaScript | Simplilearn. Available from: https://www.simplilearn.com/tutorials/javascript-tutorial/password-validation#:~:text=Whenever%20a%20user%20creates%20a%20password%2C%20one%20extra [Accessed 5 Sep. 2022].
-
 Techmonger (2022) Secure Passwords in Python With Werkzeug - Tech Monger. Available from: https://techmonger.github.io/4/secure-passwords-werkzeug/ [Accessed 13 Sep. 2022].
 ‌
 Techmonger (2022) How to add ReCaptcha to Flask App without Extension - Tech Monger. Available from: https://techmonger.github.io/5/python-flask-recaptcha/ [Accessed 9 Sept 2022].
