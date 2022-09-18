@@ -1,14 +1,15 @@
-#session is a flask extension used to support the server-side application for login attempts
+import requests
+import json
+from flask_login import login_user, login_required, logout_user, current_user
+from werkzeug.security import generate_password_hash, check_password_hash
+#  session is a flask extension used to support the server-side application for login attempts
 from flask import Blueprint, render_template, request, flash, redirect, url_for, session, app
-import requests, json
 from .models import User
 # This security library implments secure authication visa hashing and salting.
-from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
-from flask_login import login_user, login_required, logout_user, current_user
 #Timedelta function to calculate attempts
 from datetime import timedelta
-    
+
 auth = Blueprint('auth', __name__)
 
 # This is the maximum attempts for password attempts; it can be changed.
@@ -17,14 +18,16 @@ max_attempts = 3
 @auth.route('/login', methods=['GET', 'POST'])
 
 def login():
-    # These conditions monitor password attempts for 3 tries. 
-    # Warnings are flashed on each attempt.
+    """"
+    Form login.
+    """
+    #  These conditions monitor password attempts for 3 tries.
+    #  Warnings are flashed on each attempt.
     if not session.get('attempt'):
         session['attempt'] = 1
         flash('Setting attempt to 1!', category='success')
     if session['attempt'] > max_attempts:
         return render_template('errorpage.html', user=current_user)
-        
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
@@ -33,13 +36,13 @@ def login():
 
         if user:
             if check_password_hash(user.password, password):
-                session['attempt'] = 1 # First attempt matched against hashed password.
+                session['attempt'] = 1 #  First attempt matched against hashed password
                 if password:
-                   if is_human(captcha_response):
+                    if is_human(captcha_response):
                         login_user(user, remember=True)
                         return redirect(url_for('views.home'))
-                   else:
-                     flash('Bots are not allowed!', category= 'error') 
+                    else:
+                      flash('Bots are not allowed!', category= 'error') 
             else:
                 session['attempt'] = session['attempt'] + 1
                 if session['attempt'] > max_attempts: # Third failed attempt sends user to an error page.
@@ -52,16 +55,22 @@ def login():
     return render_template("login.html", user=current_user)
 
 def is_human(captcha_response):
-        secret = '6Lc0SNshAAAAACsZ5gzxwgIS7lLzggP6muRBBP0D'
-        payload = {'response':captcha_response, 'secret':secret}
-        response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload)
-        response_text = json.loads(response.text)
-        return response_text['success']
+    """
+    Form captcha.
+    """
+    secret = '6Lc0SNshAAAAACsZ5gzxwgIS7lLzggP6muRBBP0D'
+    payload = {'response':captcha_response, 'secret':secret}
+    response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload)
+    response_text = json.loads(response.text)
+    return response_text['success']
 
 
 @auth.route('/logout')
 @login_required
 def logout():
+    """
+    Form the logout
+    """
     logout_user()
     return redirect(url_for('auth.login'))
 
@@ -70,13 +79,16 @@ SpecialSym =['$', '@', '#', '%']
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
+    """
+    form sign_up
+    """
     if request.method == 'POST':
         email = request.form.get('email')
         first_name = request.form.get('firstName')
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
-        # Below are conditions for satisfying password requirements of length and complexity. 
+        # Below are conditions for satisfying password requirements of length and complexity.
         user = User.query.filter_by(email=email).first()
         if user:
             flash('Email already exists.', category='error')
@@ -93,15 +105,12 @@ def sign_up():
         elif not any(char.islower() for char in password1 and password2):
             flash('Password should have at least one lowercase letter', category='error')
         elif not any(char in SpecialSym for char in password1 and password2):
-            flash('Password should have at least one of the symbols $@#', category='error') 
+            flash('Password should have at least one of the symbols $@#', category='error')
         elif len(password1) < 8:
             flash('Password must be at least 8 characters.', category='error')
-        
-            
-      
         else:
-            #Once password requirements have been met, the password is added to database hashed and salted
-            # according to sha256 hashing function
+            #  Once password requirements have been met, the password is added
+            #  to database hashed and salted according to sha256 hashing function
             new_user = User(email=email, first_name=first_name, password=generate_password_hash(
                 password1, method='sha256'))
             db.session.add(new_user)
