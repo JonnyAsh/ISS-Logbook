@@ -24,9 +24,6 @@ These threats included;
 6. Identification and authentication failures
 
 
-
-
-
 ## 1.4 Implementation
 
 Installation:<br>
@@ -124,7 +121,7 @@ Password validation should have many paramaters which included complexity, lengt
             flash('Password should have at least one of the symbols $@#', category='error')`
             ![symbol](https://github.com/JonnyAsh/ISS-Logbook/blob/a8e696ae2ca9295b103387f4c6265b1bade1c87c/ISS%20Secure%20Logbook/website/images/symbol.png)<br><br/>
             
-## 5.2 Password validation for login
+## 4.2 Password validation for login
 One method to increase security is to have a lock-out policy of 3 attempts resulting in a 1-minute lock-out.
 
 
@@ -174,16 +171,8 @@ def login():
 
 ```
 
-
-
-
-
-
 ## 4.3 Captcha
 As a mitigation to OWASP top 10 identification and authentication failures, the use of Captcha was introduced. 
-
-
-
 
 Below is the short demonstration from the Logbook app. This was made active by introducing the site key and secret key from google captcha. See below the code section covering the captcha from auth.py
 
@@ -210,12 +199,12 @@ auth.py
 ![image](https://user-images.githubusercontent.com/94033113/190440541-b520358e-169e-4283-b2e1-501b04da67a3.png)
 
 
-An example showing how it works.
+An example showing how it works:
 
 ![image](https://user-images.githubusercontent.com/94033113/190441293-06af4a42-8fae-42a0-9b98-711fad341f64.png)
 
 
-An example showing the user trying to log in without enabling the captcha.
+An example showing the user trying to log in without enabling the captcha:
 
 ![image](https://user-images.githubusercontent.com/94033113/190441129-22ceb40b-dea0-42c2-923b-65eaae510f24.png)
 
@@ -282,9 +271,7 @@ See below the basic testing of different sections of the code.
 ![image](https://user-images.githubusercontent.com/94033113/190926645-e4bda48a-0a85-4878-84f2-f9e560c94bef.png)
 
 
-
 ![image](https://user-images.githubusercontent.com/94033113/190927650-4e47353b-7305-4cd6-bba6-db0389ca70e1.png)
-
 
 ------------------------------------------------------------
 # 7 Limitations
@@ -292,9 +279,6 @@ See below the basic testing of different sections of the code.
 2. Security logging and monitoring failures was not implemented
 3. Server side request forgery was not implemented, no access control list was created
 
-
-
- 
  ----------------------------------------------------------------
 
 # 8 References
