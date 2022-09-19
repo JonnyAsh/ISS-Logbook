@@ -4,7 +4,6 @@
 
 This project aims to design a secure application that helps ESA astronauts on the International Space Station to record sensitive research information in line with OWASP'S main security threats (OWASP, 2021) as outlined in our Design document (Ashmore et al, 2022).
 
---------------------------------------------------------------
 
 ## 1.2 Architecture
 The ISS Logbook application is built as a web microservice using Flask 2.2.2. The core application was taken from GitHub (TechwithTim2020) and adapted with multiple security features.
