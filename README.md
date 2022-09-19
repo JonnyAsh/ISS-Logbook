@@ -280,6 +280,8 @@ Khan, M.W. (2021) Pool Map With Multiple Arguments in Python. Delft Stack. Avail
 
 Ngetich, A. (2021) How to scan Python Code for Vulnerabilities using Bandit. HacWare Resources. Available from: https://resources.hacware.com/bandit-security-scan-for-python-code/ [Accessed 12 Sep. 2022].
 
+OWASP (2021) OWASP Top 10:2021. owasp.org. Available from: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
+
 Qac, H. (2022) Cyclomatic Complexity Explained | Perforce. Available from: https://www.perforce.com/video-tutorials/qac/cyclomatic-complexity-explained#:~:text=Code%20with%20a%20cyclomatic%20complexity%20between%201%20and [Accessed 12 Sep. 2022].
 
 Rjmolyneaux (2022) Use PyLint for Python code - Visual Studio (Windows). docs.microsoft.com. Available from: https://docs.microsoft.com/en-us/visualstudio/python/linting-python-code?view=vs-2022 [Accessed 13 Sep. 2022].
@@ -294,8 +296,3 @@ TechwithTim (2020) GitHub - techwithtim/Flask-Web-App-Tutorial: Code for the not
 Thangavelu, S. Purusothaman, T. & Gowrison, G. (2014) Analysis of Captcha Security Methods in Web Applications. Available from http://ijcttjournal.org/Volume9/number-8/IJCTT-V9P175.pdf [Accessed 14 Sept 2022] ‌ Qac, H. (2022) Cyclomatic Complexity Explained | Perforce. Available from: https://www.perforce.com/video-tutorials/qac/cyclomatic-complexity-explained#:~:text=Code%20with%20a%20cyclomatic%20complexity%20between%201%20and [Accessed 12 Sep. 2022].
 
 OWASP (2021) OWASP Top 10:2021. owasp.org. Available from: https://owasp.org/Top10/ [Accessed 3 Sept. 2022].
-
-
-
-
-
