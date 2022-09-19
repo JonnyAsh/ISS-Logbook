@@ -65,7 +65,7 @@ Registration requires email (username), first name, and password. See user crede
 Login require email (username) and password. See user credentials (3.1).
 
 ## 3.4 Notes
-Once authenticated, users are authorised to add and delete their notes. See notes (3.1)
+Once authenticated, users are authorised to add and delete their notes. See notes (3.1).
 
 ---------------------------------------------------------------
 # 4 Security Functions
