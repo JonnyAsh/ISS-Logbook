@@ -9,7 +9,6 @@ This project aims to design a secure application that helps ESA astronauts on th
 ## 1.2 Architecture
 The ISS Logbook application is built as a web microservice using Flask 2.2.2. The core application was taken from GitHub (TechwithTim2020) and adapted with multiple security features.
 
------------
 
 ## 1.3 Threats
 
