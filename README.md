@@ -208,6 +208,17 @@ flake8 examine stylistic errors, Mccabe searches for complexity, and Bandit anal
 ## 5.1 Flake8
 Flake8 is wrapper that checks source code for PEP8 standard violations; thus, preventing bad formatting and styling (GitHub, 2022).
 
+Pre-linting:
+
+![image](https://github.com/JonnyAsh/ISS-Logbook/blob/99b49eecd43af00c335893c30c1a68b1dc699026/ISS%20Secure%20Logbook/website/images/Flake8%20before.png)
+
+
+Post-linting:
+
+![image](https://github.com/JonnyAsh/ISS-Logbook/blob/99b49eecd43af00c335893c30c1a68b1dc699026/ISS%20Secure%20Logbook/website/images/flake8%20after.png)
+
+
+
 Install Flake8:
 `pip install flake8`
 
@@ -217,15 +228,27 @@ Run Flake8:
 ## 5.2 Pylint
 Similar to Flake8, this Python module looks for code smells, lists errors, and recommendation corrections (Rjmolyneaux, 2022).
 
-Install mccabe:
+Pre-linting:
+
+![image](https://github.com/JonnyAsh/ISS-Logbook/blob/99b49eecd43af00c335893c30c1a68b1dc699026/ISS%20Secure%20Logbook/website/images/pylint%20before.png)
+
+Post-linting:
+
+![image](https://github.com/JonnyAsh/ISS-Logbook/blob/99b49eecd43af00c335893c30c1a68b1dc699026/ISS%20Secure%20Logbook/website/images/pylint%20after.png)
+
+Install Pylint:
 `pip install pylint`<br>
 
-Run mccabe:
+Run Pylin:
 `python -m pylint auth.py`
 
 ## 5.3 McCabe (Cyclomatic Complexity)
 This tool measures the number of decisions such as 'if' conditionals in the source code; for example, the lower count, the less complex it is.
 Any result between 1 and 10 is considered manageable and clean code (Qac, 2022).
+
+Output:
+
+![image](https://github.com/JonnyAsh/ISS-Logbook/blob/99b49eecd43af00c335893c30c1a68b1dc699026/ISS%20Secure%20Logbook/website/images/mccabe%20before.png)
 
 Install Mccabe:
 `pip install mccabe`
