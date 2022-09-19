@@ -203,7 +203,7 @@ An example of a hashed and salted password of a new user:
 
 # 5 Linters
 There are four types: Pylint and 
-flake8 examine stylistic errors, Mccabe searches for complexity, and Bandit analyses for security vulnerabilities.
+Flake8 examine stylistic errors, McCabe searches for complexity, and Bandit analyses for security vulnerabilities.
 
 ## 5.1 Flake8
 Flake8 is wrapper that checks source code for PEP8 standard violations; thus, preventing bad formatting and styling (GitHub, 2022).
@@ -216,7 +216,6 @@ Pre-linting:
 Post-linting:
 
 ![image](https://github.com/JonnyAsh/ISS-Logbook/blob/99b49eecd43af00c335893c30c1a68b1dc699026/ISS%20Secure%20Logbook/website/images/flake8%20after.png)
-
 
 
 Install Flake8:
@@ -250,7 +249,7 @@ Output:
 
 ![image](https://github.com/JonnyAsh/ISS-Logbook/blob/99b49eecd43af00c335893c30c1a68b1dc699026/ISS%20Secure%20Logbook/website/images/mccabe%20before.png)
 
-Install Mccabe:
+Install mccabe:
 `pip install mccabe`
 
 Run Mccabe:
@@ -258,7 +257,7 @@ Run Mccabe:
 
 ## 5.4 Bandit
 
-Bandit is security analysis tool for scanning source code in Python. It will produce a report based any vulnerabilities such as plain text passwords in the code. Ngetich (2021). 
+Bandit is security analysis tool for scanning source code in Python. It will produce a report based any vulnerabilities such as plain text passwords in the code (Ngetich, 2021). 
 
 Install Bandit:
 `pip install bandit`<br>
