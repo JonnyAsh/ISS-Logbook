@@ -262,6 +262,7 @@ See below the basic testing of different sections of the code:
 1. Server-side input validation was not implemented – injection was not mitigated.
 2. Security logging and monitoring failures was not implemented.
 3. Server-side request forgery was not implemented, no access control list was created.
+4. Multifactor Authentication was not added.
 
  ----------------------------------------------------------------
 
