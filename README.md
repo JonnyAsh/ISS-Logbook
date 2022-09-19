@@ -202,7 +202,7 @@ An example of a hashed and salted password of a new user:
 -------------------------------------------------------------
 
 # 5 Linters
-Below are four types: Pylint and 
+There are four types: Pylint and 
 flake8 examine stylistic errors, Mccabe searches for complexity, and Bandit analyses for security vulnerabilities.
 
 ## 5.1 Flake8
@@ -251,7 +251,7 @@ Google secret key exposed; this will be deleted after submission.
 -------------------------------------------------------------
 
 # 6 Testing
-See below the basic testing of different sections of the code.
+See below the basic testing of different sections of the code:
 ![image](https://user-images.githubusercontent.com/94033113/190926645-e4bda48a-0a85-4878-84f2-f9e560c94bef.png)
 
 
@@ -259,9 +259,9 @@ See below the basic testing of different sections of the code.
 
 ------------------------------------------------------------
 # 7 Limitations
-1. Server-side input validation was not implemented – injection was not mitigated
-2. Security logging and monitoring failures was not implemented
-3. Server-side request forgery was not implemented, no access control list was created
+1. Server-side input validation was not implemented – injection was not mitigated.
+2. Security logging and monitoring failures was not implemented.
+3. Server-side request forgery was not implemented, no access control list was created.
 
  ----------------------------------------------------------------
 
