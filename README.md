@@ -247,10 +247,10 @@ Output:
 
 ![image](https://github.com/JonnyAsh/ISS-Logbook/blob/99b49eecd43af00c335893c30c1a68b1dc699026/ISS%20Secure%20Logbook/website/images/mccabe%20before.png)
 
-Install mccabe:
+Install McCabe:
 `pip install mccabe`
 
-Run Mccabe:
+Run McCabe:
 `python -m mccabe auth.py`
 
 ## 5.4 Bandit
