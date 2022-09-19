@@ -66,7 +66,7 @@ def login():
 
 def is_human(captcha_response):
     """
-    Form captcha.
+    Validating recaptcha response
     """
     secret = '6Lc0SNshAAAAACsZ5gzxwgIS7lLzggP6muRBBP0D'
     payload = {'response': captcha_response, 'secret': secret}
